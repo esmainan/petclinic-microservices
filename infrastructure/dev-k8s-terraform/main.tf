@@ -176,7 +176,7 @@ resource "aws_instance" "worker-1" {
         iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
-    subnet_id = "ssubnet-0ec1cb86b5a238e83"  # select own subnet_id of us-east-1a
+    subnet_id = "subnet-0ec1cb86b5a238e83"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-1"
